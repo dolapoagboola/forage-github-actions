@@ -1,0 +1,21 @@
+name: Learn GitHub Actions
+
+on:
+  push:
+
+env:
+  MY_VARIABLE: "Hello from GitHub Actions"
+
+jobs:
+  learn-github-actions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say hello
+        run: echo "$MY_VARIABLE"
+
+      - name: Show repository
+        run: echo "Repository: ${{ github.repository }}"
+
+      - name: Show branch
+        run: echo "Branch: ${{ github.ref_name }}"
